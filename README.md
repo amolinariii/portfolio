@@ -9,7 +9,7 @@ Welcome to my portfolio!
 ## **Education**
 - **[Master of Science: Statistics and Applied Mathematics]** — *[Cal Poly Pomona]*  
   *Expected Graduation: [May 2026]*  
-  Relevant Courses: [Statistical Learning], [Multivariate Analysis], [Advance Data Analytics]
+  Relevant Courses: [Statistical Learning], [Multivariate Data Analysis], [Advance Data Analytics]
   
   **[Bachelor of Science: Applied Mathematics]** — *[UCLA]*  
   *Graduation Year: [2021]*  
@@ -18,30 +18,24 @@ Welcome to my portfolio!
 
 ## **Work History**
 
-### **[Job Title]**  
-*Company Name* | [Start Date] – [End Date]  
+### **[Sales and Operations Assistant]**  
+*Western Case Inc.* | [May 2022] – [May 2024]  
 - **Responsibilities:**
-  - [Responsibility 1]
-  - [Responsibility 2]
-  - [Responsibility 3]
-
-### **[Another Job Title]**  
-*Company Name* | [Start Date] – [End Date]  
-- **Key Contributions:**
-  - [Contribution 1]
-  - [Contribution 2]
-  - [Contribution 3]
+  - [Extracted data from the company ERP system to generate product sales, customer accounts, and machine efficiency reports that informed department heads of changes in operational needs and advised the redistribution of resources.]
+  - [Generated KPI dashboards in Power BI for senior management to utilize, measure, and implement strategic planning and business decisions.]
+  - [Facilitated sales and operations meetings with department heads to discuss marketing strategies based on customer behaviors, product sales, and production efficiencies.]
+  - [Generated daily and monthly sales and backlog reports using Excel to update senior management on product sales, account trends, and operational changes.]
 
 ---
 
 ## **Projects**
 
-### **Project 1: [Project Name]**
+### **Project 1: [CRM Dashboard]**
 Description: [Brief description of what the project is about and what was accomplished].  
 Tech Stack: [Languages, frameworks, tools used].  
 ![Project Screenshot](./images/project1.png)
 
-### **Project 2: [Project Name]**
+### **Project 2: [Customer Segmentation Analysis]**
 Description: [Brief description of what the project is about and what was accomplished].  
 Tech Stack: [Languages, frameworks, tools used].  
 ![Project Screenshot](./images/project2.png)
@@ -49,19 +43,11 @@ Tech Stack: [Languages, frameworks, tools used].
 ---
 
 ## **Skills**
-- **Languages:** [e.g., Python, JavaScript, R]
-- **Frameworks:** [e.g., React, Django]
-- **Tools:** [e.g., Git, Docker]
-- **Other Skills:** [e.g., Data Analysis, Machine Learning, Cloud Computing]
+- **Languages:** [Python, R Studio, C++, Microsoft SQL Server, Big Query, Power BI, Tableau]
+- **Analysis Methods:** [Descriptive Statistics, Inferential Statistics, Exploratory Data Analysis, Data Cleaning, Data Visualization, Machine Learning, NLP, Time Series]
 
 ---
 
-## **Notable Courses**
-- **[Course Name]** - Description of the course or a key takeaway.
-- **[Course Name]** - Description of the course or a key takeaway.
-- **[Course Name]** - Description of the course or a key takeaway.
-
----
 
 ## **Code Examples**
 
