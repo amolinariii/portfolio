@@ -1,26 +1,18 @@
 # Data Analyst | Data Scientist
 
-### Education
-
-
-### Work Experience
-
-
-### Projects
-
-# **Portfolio of [Your Name]**
-
-![Profile Picture](./images/profile.jpg)
-
 ## **About Me**
-Hi, I'm **[Your Name]**, a passionate [Your Profession] with a strong background in [Your Field/Industry]. I enjoy tackling complex challenges and creating solutions through [key skills/technologies]. Welcome to my portfolio!
+Results-oriented professional with a proven ability to extract and analyze data to inform strategic decisions and improve operational processes. Skilled with analyzing and manipulating data in Python, R, SQL, and visualizing data in Tableau and Power BI. Experienced in creating detailed reports and KPI dashboards, as well as managing cross-departmental projects to boost efficiency and achieve business objectives.
+Welcome to my portfolio!
 
 ---
 
 ## **Education**
-- **[Degree Title]** — *[University Name]*  
-  *Graduation Year: [Year]*  
-  Courses: [Course 1], [Course 2], [Course 3]  
+- **[Master of Science: Statistics and Applied Mathematics]** — *[Cal Poly Pomona]*  
+  *Expected Graduation: [May 2026]*  
+  Relevant Courses: [Statistical Learning], [Multivariate Analysis], [Advance Data Analytics]
+  
+  **[Bachelor of Science: Applied Mathematics]** — *[UCLA]*  
+  *Graduation Year: [2021]*  
 
 ---
 
