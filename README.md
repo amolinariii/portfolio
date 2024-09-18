@@ -6,28 +6,6 @@ Welcome to my portfolio!
 
 ---
 
-## **Education**
-- **[Master of Science: Statistics and Applied Mathematics]** — *[Cal Poly Pomona]*  
-  *Expected Graduation: [May 2026]*  
-  Relevant Courses: [Statistical Learning], [Multivariate Data Analysis], [Advance Data Analytics]
-  
-  **[Bachelor of Science: Applied Mathematics]** — *[UCLA]*  
-  *Graduation Year: [2021]*  
-
----
-
-## **Work History**
-
-### **[Sales and Operations Assistant]**  
-*Western Case Inc.* | [May 2022] – [May 2024]  
-- **Responsibilities:**
-  - [Extracted data from the company ERP system to generate product sales, customer accounts, and machine efficiency reports that informed department heads of changes in operational needs and advised the redistribution of resources.]
-  - [Generated KPI dashboards in Power BI for senior management to utilize, measure, and implement strategic planning and business decisions.]
-  - [Facilitated sales and operations meetings with department heads to discuss marketing strategies based on customer behaviors, product sales, and production efficiencies.]
-  - [Generated daily and monthly sales and backlog reports using Excel to update senior management on product sales, account trends, and operational changes.]
-
----
-
 ## **Projects**
 
 ### **Project 1: [CRM Dashboard]**
@@ -48,9 +26,23 @@ Tech Stack: [Languages, frameworks, tools used].
 
 ---
 
+## **Education**
+- **[Master of Science: Statistics and Applied Mathematics]** — *[Cal Poly Pomona]*  
+  *Expected Graduation: [May 2026]*  
+  Relevant Courses: [Statistical Learning], [Multivariate Data Analysis], [Advance Data Analytics]
+  
+  **[Bachelor of Science: Applied Mathematics]** — *[UCLA]*  
+  *Graduation Year: [2021]*  
 
-## **Code Examples**
+---
 
-### **Embedding an Image**
-```markdown
-![Description of Image](./path_to_image/image_name.png)
+## **Work History**
+
+### **[Sales and Operations Assistant]**  
+*Western Case Inc.* | [May 2022] – [May 2024]  
+- **Responsibilities:**
+  - [Extracted data from the company ERP system to generate product sales, customer accounts, and machine efficiency reports that informed department heads of changes in operational needs and advised the redistribution of resources.]
+  - [Generated KPI dashboards in Power BI for senior management to utilize, measure, and implement strategic planning and business decisions.]
+  - [Facilitated sales and operations meetings with department heads to discuss marketing strategies based on customer behaviors, product sales, and production efficiencies.]
+  - [Generated daily and monthly sales and backlog reports using Excel to update senior management on product sales, account trends, and operational changes.]
+
