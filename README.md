@@ -11,7 +11,8 @@ Welcome to my portfolio!
 ### **Project 1: [CRM Dashboard]**
 Description: [Brief description of what the project is about and what was accomplished].  
 Tech Stack: [Languages, frameworks, tools used].  
-![Project Screenshot](./images/project1.png)
+![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
+
 
 ### **Project 2: [Customer Segmentation Analysis]**
 Description: [Brief description of what the project is about and what was accomplished].  
