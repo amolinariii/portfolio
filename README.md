@@ -17,7 +17,8 @@ Tech Stack: [Languages, frameworks, tools used].
 ### **Project 2: [Customer Segmentation Analysis]**
 Description: [Brief description of what the project is about and what was accomplished].  
 Tech Stack: [Languages, frameworks, tools used].  
-![Project Screenshot](./images/project2.png)
+![Customer Segmentation Plot](https://github.com/amolinariii/portfolio/raw/main/images/Cluster%20Analysis%20plot.png)
+
 
 ---
 
