@@ -1,4 +1,4 @@
-# Data Scientist
+# Data Analyst | Data Scientist
 
 ### Education
 
