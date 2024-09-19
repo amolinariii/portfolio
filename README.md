@@ -1,25 +1,27 @@
 # Data Analyst | Data Scientist
 
 ## **About Me**
-Results-oriented professional with a proven ability to extract and analyze data to inform strategic decisions and improve operational processes. Skilled with analyzing and manipulating data in Python, R, SQL, and visualizing data in Tableau and Power BI. Experienced in creating detailed reports and KPI dashboards, as well as managing cross-departmental projects to boost efficiency and achieve business objectives.
+Results-oriented professional with a proven ability to extract and analyze data to inform strategic decisions and improve operational processes. Skilled with analyzing and manipulating data in Python, R, SQL, and visualizing data in Tableau and Power BI. Experienced in creating detailed reports and KPI dashboards, as well as creating machine learning models to help drive business intelligence.
 Welcome to my portfolio!
 
 ---
 
 ## **Projects**
 
-### **Project 1: [CRM Dashboard]**
+### **Project 1: CRM Dashboard**
 Description: Using CRM data from Maven Analytics I generated a dashboard in Power BI to highlight won, potential, and missed sales for products and accounts. I upload the Excel files into Microsoft SQL Server to clean the data and join them into a master table. I was able to load the data into Power BI by querying them from SQL Server.  
 Technical: Excel, Microsoft SQL Server, Power BI.  
+
+Preview of Project:
 ![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
 
 
 ### **Project 2: [Customer Segmentation Analysis]**
 Description: Using customer data from Kaggle, I am implementing unsupervised methods to generate a recommender system to fill in missing values, summarize the features with Principal Components Analysis, and use K-means, K-modes, and K-prototypes to cluster customers and generate insights into their features and behaviors for better adervtising of products.  
 Technical: Excel, R Studio, Unsupervised Learning.  
+
+Preview of Project
 ![Cluster Analysis Plot](https://github.com/amolinariii/portfolio/raw/main/images/Cluster%20Analysis%20plot.png)
-
-
 
 ---
 
