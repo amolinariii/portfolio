@@ -16,7 +16,10 @@ Applied to e-commerce data from an electronics store with 2162 products from Jan
 We use sequence analysis to examine the temporal behavior of the cluster assignments and resulting states. We give recommendations based on these findings to inform operational decision-making, inventory strategies, and marketing initiatives.
 
 Preview of Work:
-
+<div class="image-row">
+    <img src="images/dashboard1.png" alt="Dashboard 1">
+    <img src="images/dashboard2.png" alt="Dashboard 2">
+</div>
 
 ## **Projects**
 
