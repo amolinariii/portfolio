@@ -6,99 +6,53 @@ Welcome to my portfolio!
 
 ---
 
-## **Thesis: Identifying Business States and Product States in Transaction Data**
+## Thesis: Identifying Business States and Product States in Transaction Data
 
 ### Overview
 
 Organizations often analyze customer demand, product performance, and purchasing behavior separately, making it difficult to understand how these factors interact over time. This research develops a state-based analytical framework that combines transaction volume and product purchasing patterns to identify recurring business conditions and product behavior states.
 
-### Objective
-
-Develop a framework for identifying and monitoring operational states by separating product transaction composition from overall demand volume. The resulting states provide a structured view of business performance, customer purchasing behavior, and product trends that can support forecasting, inventory planning, and strategic decision-making.
-
 ### Dataset
 
-* 2M+ transactions analyzed
-* 2,162 products
-* E-commerce electronics retailer
-* January 2020 – July 2020
+- 2M+ transactions analyzed
+- 2,162 products
+- E-commerce electronics retailer
+- January 2020 – July 2020
 
 ### Methodology
 
-* Hierarchical Clustering
-* Dirichlet Modeling
-* Sequence Analysis
-* Time Series Pattern Analysis
-* Multivariate Statistical Methods
-* R Programming
-
-Product preference clusters were identified using product transaction proportions and further partitioned into product trend clusters. Demand clusters were identified separately using transaction volume. By combining these cluster assignments, business states and product states were constructed to provide both high-level operational insights and detailed purchasing behavior patterns.
+- Hierarchical Clustering
+- Sequence Analysis
+- Time Series Pattern Analysis
+- Multivariate Statistical Methods
+- R Programming
 
 ### Key Findings
 
-* Identified **2 distinct product preference periods**
-* Identified **5 product trend clusters**
-* Identified **3 product demand clusters**
-* Constructed business states representing overall operational conditions
-* Constructed product states representing detailed customer purchasing behavior
-
-Sequence analysis was used to evaluate how these states evolved over time, revealing recurring operational patterns and shifts in customer demand.
+- Identified 2 distinct product preference periods
+- Identified 5 product trend clusters
+- Identified 3 product demand clusters
+- Constructed business states representing overall operational conditions
+- Constructed product states representing detailed customer purchasing behavior
 
 ### Business Impact
 
-The framework provides actionable insights that can support:
+The framework provides actionable insights for:
 
-* Demand forecasting
-* Inventory optimization
-* Product performance monitoring
-* Customer behavior analysis
-* Marketing strategy development
-* Operational planning
+- Demand forecasting
+- Inventory optimization
+- Product performance monitoring
+- Customer behavior analysis
+- Marketing strategy development
+- Operational planning
 
 ### Preview of Work
 
-<section id="thesis">
-    <h3>Identifying Business States and Product States in Transaction Data</h3>
+| Business States | Product States |
+|----------------|----------------|
+| ![](images/business_state_assignments.png) | ![](images/product_state_assignments.png) |
 
-```
-<div class="project-metrics">
-    <span>2M+ Transactions</span>
-    <span>2,162 Products</span>
-    <span>Hierarchical Clustering</span>
-    <span>Sequence Analysis</span>
-</div>
-
-<p>
-    Developed a state-based analytical framework that separates product
-    composition from demand volume to identify recurring operational and
-    purchasing patterns. By integrating hierarchical clustering,
-    Dirichlet modeling, and sequence analysis, the framework uncovers
-    business states and product states that provide insight into customer
-    behavior, product performance, and operational trends.
-</p>
-
-<div class="image-row">
-    <figure>
-        <img src="images/business_state_assignments.png"
-             alt="Business State Assignments">
-        <figcaption>Business State Assignments</figcaption>
-    </figure>
-
-    <figure>
-        <img src="images/product_state_assignments.png"
-             alt="Product State Assignments">
-        <figcaption>Product State Assignments</figcaption>
-    </figure>
-</div>
-
-<p>
-    The resulting state assignments reveal recurring demand and purchasing
-    patterns that can be leveraged for inventory planning, demand
-    forecasting, product management, and targeted business strategies.
-</p>
-```
-</section>
-
+The resulting state assignments reveal recurring demand and purchasing patterns that can support inventory planning, demand forecasting, product management, and operational decision-making.
 
 ## **Projects**
 
