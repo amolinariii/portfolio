@@ -14,6 +14,7 @@ Data analyst with an M.S. in Statistics and Applied Mathematics and experience s
 - [MISSA Competition](#cal-poly-pomona-missa-30th-annual-information-technology-competition--business-analytics)
 - [ONT Airport Challenge](#ontario-international-airport-ceo-business-challenge)
 - [CRM Dashboard](#crm-sales-performance-dashboard)
+  
 ---
 
 ## Featured Research Project
