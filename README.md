@@ -131,9 +131,9 @@ The resulting model enables organizations to proactively identify customers at r
 
 ![Customer Churn Analysis](images/Churn_Summary.png)
 
-### Presentation
+### Report
 
-[View Full Presentation](<Customer Churn/STA 4700 Final Project_ Customer Churn Factors>)
+[View Full Presentation](<Customer Churn/STA 4700 Final Project_ Customer Churn Factors.pdf>)
 
 
 ### Cal Poly Pomona MISSA 30th Annual Information Technology Competition – Business Analytics
