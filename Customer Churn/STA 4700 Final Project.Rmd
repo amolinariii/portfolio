@@ -1,0 +1,457 @@
+---
+  title: 'STA 4700 Final Project: Customer Churn Factors'
+author: "Arturo Molinar (018150925)"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+# libraries used
+library(pROC)
+library(yardstick)
+library(tidyverse)
+library(broom)
+library(readxl)
+library(DescTools)
+library(caret)
+
+# File output preferences
+knitr::opts_chunk$set(out.width = "50%", out.height="50%", fig.align="center", 
+                      warning=FALSE, message=FALSE)
+
+excel_sheet <- function(sheet_name) {
+  # Prompt user to choose an Excel file
+  file_path <- file.choose()
+  
+  # Read and return the sheet
+  df <- read_excel(file_path, sheet = sheet_name)
+  return(df)
+}
+
+gym <- excel_sheet("gym_churn")
+
+```
+
+```{r}
+View(gym)
+dim(gym)
+
+# check for missing values
+missing_rows <- gym[!complete.cases(gym), ]
+missing_rows
+
+
+```
+
+# Convert Data types
+```{r}
+convert_to_factors <- function(df, col_indexes) {
+  # Check if indexes are within bounds
+  if (any(col_indexes > ncol(df))) {
+    stop("One or more indexes exceed the number of columns in the data frame.")
+  }
+  
+  # Convert selected columns to factor
+  df[col_indexes] <- lapply(df[col_indexes], as.factor)
+  
+  return(df)
+}
+gym <- convert_to_factors(gym, c(1:6,9,11,13))
+```
+
+# Tests of independence
+```{r}
+gtests <- function(df, target_col_index_range, reference_col) {
+  # If reference_col is a name, get its index
+  if (is.character(reference_col)) {
+    reference_col_index <- which(names(df) == reference_col)
+  } else {
+    reference_col_index <- reference_col
+  }
+
+  # Initialize result container
+  results <- data.frame(Column = character(), P_Value = numeric(), stringsAsFactors = FALSE)
+  
+  # Loop over each target column index
+  for (i in target_col_index_range) {
+    target_col_name <- names(df)[i]
+    reference_col_name <- names(df)[reference_col_index]
+    
+    target_col <- df[[i]]
+    ref_col <- df[[reference_col_index]]
+    
+    # Construct contingency table
+    tbl <- table(target_col, ref_col)
+    
+    # Print the table
+    cat("\nContingency Table for:", target_col_name, "vs", reference_col_name, "\n")
+    print(tbl)
+    
+    # Only run G-test if table is valid
+    if (nrow(tbl) > 1 && ncol(tbl) > 1) {
+      g_result <- GTest(tbl)
+      p_val <- g_result$p.value
+    } else {
+      p_val <- NA  # Not enough variability to run test
+    }
+    
+    # Append result
+    results <- rbind(
+      results,
+      data.frame(Column = target_col_name, P_Value = p_val, stringsAsFactors = FALSE)
+    )
+  }
+  
+  return(results)
+}
+
+
+test_independence <- gtests(gym, c(1:6,9,11), "Churn")
+
+print(test_independence)
+
+```
+
+ # Tests comparing Sample Means
+```{r}
+anova_tests <- function(df, col_indexes, group_var_name) {
+  # Check if group_var_name exists
+  if (!(group_var_name %in% names(df))) {
+    stop("Grouping variable not found in data frame.")
+  }
+  
+  # Ensure group variable is a factor
+  df[[group_var_name]] <- as.factor(df[[group_var_name]])
+  
+  # Initialize results container
+  results <- data.frame(Variable = character(), P_Value = numeric(), stringsAsFactors = FALSE)
+  
+  # Loop over selected column indexes
+  for (i in col_indexes) {
+    var_name <- names(df)[i]
+    
+    # Build formula: variable ~ group
+    formula <- as.formula(paste(var_name, "~", group_var_name))
+    
+    # Run ANOVA using aov()
+    aov_result <- aov(formula, data = df)
+    
+    # Extract p-value from ANOVA summary
+    p_val <- summary(aov_result)[[1]][["Pr(>F)"]][1]
+    
+    # Append result
+    results <- rbind(
+      results,
+      data.frame(Variable = var_name, P_Value = p_val, stringsAsFactors = FALSE)
+    )
+  }
+  
+  return(results)
+}
+
+anova_table <- anova_tests(gym, c(7,8,10,12), "Churn")
+print(anova_table)
+```
+
+# Numeric Plots facet wrap by "Churn"
+```{r}
+box_plots <- function(df_box, cluster) {
+  # Prepare the data for boxplots
+  numeric_data_box <- df_box %>%
+    dplyr::select_if(is.numeric) %>%
+    dplyr::mutate(cluster_col = df_box[[cluster]]) %>%  # Dynamically add the cluster column
+    tidyr::gather(var, value, -cluster_col)  # Gather the data into long format
+  
+  # Create the boxplot
+  ggplot(numeric_data_box, aes(x = factor(cluster_col), y = value, fill = factor(cluster_col))) +
+    geom_boxplot() +
+    scale_fill_brewer(palette = "Set3", name = "Churn Group") +
+    labs(
+      title = "Boxplots by Churn Group",
+      x = "Churn",
+      y = "Values"
+    ) +
+    facet_wrap(~var, scales = "free_y", ncol = 4) +
+    theme_minimal() +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+}
+
+box_plots(df_box = gym, cluster = "Churn")
+
+```
+# Residual Analysis
+```{r}
+chisq_stdres <- function(df, col_indexes, group_var) {
+  # Check if group_var exists
+  if (!(group_var %in% names(df))) {
+    stop("Grouping variable not found in the data frame.")
+  }
+
+  for (i in col_indexes) {
+    var_name <- names(df)[i]
+    
+    # Create contingency table
+    contingency_tbl <- table(df[[group_var]], df[[var_name]])
+    
+    # Perform Chi-squared test without Yates' correction
+    test_result <- chisq.test(contingency_tbl, correct = FALSE)
+    
+    # Print variable name and p-value
+    cat("\nVariable:", var_name, "\n")
+    print(test_result)
+    
+    # Print standardized residuals
+    cat("Standardized residuals:\n")
+    print(test_result$stdres)
+  }
+}
+
+chisq_stdres(gym, c(1:6,9,11), "Churn")
+
+```
+# Building Logistic Regression Model
+```{r}
+# creating a validation group
+set.seed(3839)
+trainIndex <- createDataPartition(gym$Churn,
+                                  p = 0.7,
+                                  list = F,
+                                  times = 1)
+gym_train <- gym[trainIndex,]  # training set
+gym_test <- gym[-trainIndex,]  # hold out test set
+
+K <- 5 # cross validation
+set.seed(3839)
+control_5kf <- trainControl(method = "cv", number = K)
+lambda_grid <- 10^seq(-10,10, length=101)  
+lasso_lambda <- -1.85 # optimized parameter for lasso
+ridge_lambda <- -1.55 # optimized parameter for ridge
+set.seed(3839)
+fit_lasso <- train(Churn ~ .,
+                   data = gym_train,
+                   method = "glmnet",
+                   metric = "Accuracy",
+                   tuneGrid = expand.grid(alpha = 1, lambda = lambda_grid),
+                   trControl = control_5kf
+                   )
+set.seed(3839)
+fit_ridge <- train(Churn ~ .,
+                   data = gym_train,
+                   method = "glmnet",
+                   metric = "Accuracy",
+                   tuneGrid = expand.grid(alpha = 0, lambda = lambda_grid),
+                   trControl = control_5kf
+                   )
+
+plot(fit_lasso, xTrans = log10)
+plot(fit_ridge, xTrans = log10)
+```
+```{r}
+cor(gym[, c(7, 8, 10, 12)])
+```
+
+# Potential Models
+```{r}
+K <- 5
+set.seed(3839)
+control_5kf <- trainControl(method = "cv", number = K)
+lambda_grid <- 10^seq(-3, 3, length = 100)
+lasso_lambda <- -1.85 # best fitting lambda value 
+ridge_lambda <- -1.55 # best fitting lambda value
+set.seed(3839)
+fit_lasso <- train(Churn ~ .,
+                   data = gym_train,
+                   method = "glmnet",
+                   metric = "Accuracy",
+                   tuneGrid = expand.grid(alpha = 1, lambda = lambda_grid),
+                   trControl = control_5kf
+                   )
+set.seed(3839)
+fit_ridge <- train(Churn ~ .,
+                   data = gym_train,
+                   method = "glmnet",
+                   metric = "Accuracy",
+                   tuneGrid = expand.grid(alpha = 0, lambda = lambda_grid),
+                   trControl = control_5kf
+                   )
+ridge_no_gender <- train(Churn ~ .- Gender,
+                   data = gym_train,
+                   method = "glmnet",
+                   metric = "Accuracy",
+                   tuneGrid = expand.grid(alpha = 0, lambda = lambda_grid),
+                   trControl = control_5kf
+                   )
+
+plot(fit_lasso, xTrans = log10)
+plot(fit_ridge, xTrans = log10)
+plot(ridge_no_gender, xTrans = log10)
+```
+
+# Model Performance based on Specificity, Sensitivity, AUC, and Accuracy
+```{r}
+predictions_lasso <- data.frame(
+  y_lasso = gym_test$Churn,
+  phat_lasso = predict(fit_lasso, type = "prob", newdata =
+                         gym_test)$'1',
+  yhat_lasso = predict(fit_lasso, type = "raw", newdata = gym_test)
+)
+
+predictions_ridge <- data.frame(
+  y_ridge = gym_test$Churn,
+  phat_ridge = predict(fit_ridge, type = "prob", newdata =
+                         gym_test)$'1',
+  yhat_ridge = predict(fit_ridge, type = "raw", newdata = gym_test)
+)
+
+predictions_ridge_no_gender <- data.frame(
+  y_ridge = gym_test$Churn,
+  phat_ridge_no_gender = predict(ridge_no_gender, type = "prob", newdata =
+                         gym_test)$'1',
+  yhat_ridge_no_gender = predict(ridge_no_gender, type = "raw", newdata = 
+                                   gym_test)
+)
+
+roc_lasso <- roc(predictions_lasso, y_lasso, phat_lasso)
+
+roc_ridge <- roc(predictions_ridge, y_ridge, phat_ridge)
+
+roc_ridge_2 <- roc(predictions_ridge_no_gender, y_ridge, phat_ridge_no_gender)
+
+roc_list = list(Lasso = roc_lasso, Ridge = roc_ridge, Ridge_No_Gender = roc_ridge_2)
+ggroc(roc_list) +
+  geom_segment(aes(x=1, xend=0, y=0, yend=1), color = "grey",
+               linetype = "dashed") +
+  ggtitle("ROC Curves for Test Set")
+
+acc_lasso <- accuracy(predictions_lasso, y_lasso, yhat_lasso)
+acc_ridge <- accuracy(predictions_ridge, y_ridge, yhat_ridge)
+acc_ridge_2 <- accuracy(predictions_ridge_no_gender, y_ridge, 
+                        yhat_ridge_no_gender)
+
+# Lasso confusion matrix
+cm_lasso <- confusionMatrix(predictions_lasso$yhat_lasso,
+                            predictions_lasso$y_lasso, positive = "0")
+
+# Ridge confusion matrix
+cm_ridge <- confusionMatrix(predictions_ridge$yhat_ridge,
+                            predictions_ridge$y_ridge, positive = "0")
+
+# Ridge (no gender) confusion matrix
+cm_ridge_2 <- confusionMatrix(predictions_ridge_no_gender$yhat_ridge_no_gender,
+                              predictions_ridge_no_gender$y_ridge, positive = "0")
+# Extract Sensitivity and Specificity
+sensitivity <- c(cm_lasso$byClass["Sensitivity"],
+                     cm_ridge$byClass["Sensitivity"],
+                     cm_ridge_2$byClass["Sensitivity"])
+
+specificity <- c(cm_lasso$byClass["Specificity"],
+                     cm_ridge$byClass["Specificity"],
+                     cm_ridge_2$byClass["Specificity"])
+
+
+# Create a data frame summarizing the model and performance
+Model_perf <- data.frame(
+  Name_of_Model = c("Lasso", "Ridge", "Ridge No Gender"),
+  Accuracy = c(round(acc_lasso$.estimate,4), round(acc_ridge$.estimate,4), 
+               round(acc_ridge_2$.estimate,4)),
+  AUC = c(round(auc(roc_lasso),4), round(auc(roc_ridge),4), 
+          round(auc(roc_ridge_2),4)),
+  Sensitivity = round(sensitivity, 4),
+  Specificity = round(specificity, 4)
+)
+
+Model_perf
+```
+
+
+# Compare coefficients
+```{r}
+# Extract Lasso coefficients
+coef_lasso <- coef(fit_lasso$finalModel, s = fit_lasso$bestTune$lambda)
+coef_lasso <- as.matrix(coef_lasso)
+
+# Extract Ridge coefficients
+coef_ridge <- coef(fit_ridge$finalModel, s = fit_ridge$bestTune$lambda)
+coef_ridge <- as.matrix(coef_ridge)
+
+# Extract Ridge No Gender coefficients
+coef_ridge_gender <- coef(ridge_no_gender$finalModel, 
+                          s = ridge_no_gender$bestTune$lambda)
+coef_ridge_gender <- as.matrix(coef_ridge_gender)
+
+# Get variable names
+vars <- rownames(coef_lasso)
+
+# Create a data frame for comparison
+coef_comparison <- data.frame(
+  Variable = vars,
+  Lasso = round(coef_lasso[, 1], 4),
+  Ridge = round(coef_ridge[, 1], 4)
+)
+
+# View results
+print(coef_comparison)
+
+# Get variable names
+var <- rownames(coef_lasso)
+
+# Create a data frame for comparison
+coef_model_selected <- data.frame(
+  Parameter = var,
+  Lasso = print(round(coef_lasso[, 1], 4))
+)
+print(coef_model_selected)
+
+```
+
+
+
+```{r}
+stacked_proportion_tables <- function(df, cols, compare_col) {
+  # Initialize an empty list to store each proportion table
+  prop_list <- list()
+  
+  for (col_index in cols) {
+    col_name <- names(df)[col_index]
+    
+    # Create a contingency table between selected column and compare_col
+    tab <- table(df[[col_name]], df[[compare_col]])
+    
+    # Convert to proportion table by column
+    prop_tab <- round(prop.table(tab, margin = 2), 2)
+    
+    # Convert to data frame for merging
+    prop_df <- as.data.frame.matrix(prop_tab)
+    
+    # Recode column names from "0"/"1" to "Stay"/"Churn"
+    colnames(prop_df) <- gsub("^0$", "Stay", colnames(prop_df))
+    colnames(prop_df) <- gsub("^1$", "Churn", colnames(prop_df))
+    
+    # Add identifier columns
+    prop_df$Variable <- col_name
+    prop_df$Level <- rownames(prop_df)
+    
+    # Reorder columns
+    prop_df <- prop_df[, c("Variable", "Level", setdiff(names(prop_df), c("Variable", "Level")))]
+    
+    # Reset row names
+    rownames(prop_df) <- NULL
+    
+    # Store
+    prop_list[[col_name]] <- prop_df
+  }
+  
+  # Combine all into one data frame
+  result <- do.call(rbind, prop_list)
+  return(result)
+}
+
+churn_prop <- stacked_proportion_tables(gym, c(11,9), "Churn")
+```
+
+```{r}
+churn_prop
+```
+
