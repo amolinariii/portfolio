@@ -194,13 +194,13 @@ Developed a phased roadmap for parking subscriptions, dynamic pricing, customer 
 
 ### Summary
 
-A phased implementation strategy was developed to prioritize foundational data integration efforts, customer identity resolution, and long-term customer analytics capabilities.
+Analysis of parking utilization, revenue trends, and customer transportation behaviors revealed opportunities to improve parking demand, increase revenue, and enhance the traveler experience. Key findings showed that parking utilization is heavily influenced by lot location, seasonal demand patterns, and the growing adoption of rideshare services. Underutilized parking assets, customer dissatisfaction with parking accessibility, and increasing demand for digital convenience highlighted areas for operational improvement.
 
-![Key Findings](images/ONT%Summary-1.png)
+Based on these findings, recommendations focused on parking subscriptions, dynamic pricing, shuttle optimization, enhanced wayfinding, customer loyalty programs, EV charging infrastructure, and digital customer services. A phased implementation roadmap was developed to improve parking utilization, strengthen customer engagement, and support Ontario International Airport's long-term mobility strategy.
 
-### Presentation
+![Key Findings](images/ONT%20Summary-1.png)
 
-[View Full Presentation](<Competitions/ONT Future Proofing Airport Parking.pdf>)
+**Presentation:** [View Full Presentation](<Competitions/ITC Mathodicals 2026 (1)-compressed.pdf>)
 
 ---
 
