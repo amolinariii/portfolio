@@ -142,6 +142,40 @@ Data Warehousing • Customer Journey Analysis • Data Integration • Customer
 Provided a strategic roadmap for integrating customer data across channels, improving customer visibility, and enabling more effective customer analytics. Recommendations focused on strengthening customer retention, increasing brand engagement, improving marketing effectiveness, and supporting customer lifetime value analysis.
 
 
+### Ontario International Airport CEO Business Challenge
+
+**Overview**
+
+Developed a strategic analytics and revenue optimization plan for Ontario International Airport (ONT) focused on improving parking utilization, increasing non-aeronautical revenue, and preparing for future shifts in transportation and customer behavior. The project combined operational analysis, customer behavior insights, and technology recommendations to enhance both revenue generation and traveler experience.
+
+**Objective**
+
+Identify opportunities to improve parking utilization and revenue while adapting to long-term trends such as rideshare adoption, electric vehicles, digital convenience, and emerging mobility technologies.
+
+**Methodology**
+
+* Analyzed parking utilization, occupancy, and revenue trends across airport parking facilities
+* Evaluated customer parking behaviors, transportation preferences, and rideshare adoption patterns
+* Assessed underutilized parking assets and operational inefficiencies
+* Examined customer experience challenges using utilization data and customer feedback
+* Developed data-driven recommendations for pricing, service differentiation, technology integration, and infrastructure investments
+
+**Key Insights**
+
+* Identified utilization imbalances between premium and economy parking facilities
+* Revealed opportunities to increase demand for underutilized parking lots through service improvements and pricing incentives
+* Evaluated the growing impact of rideshare services on airport parking demand
+* Identified customer experience pain points related to parking access, navigation, and shuttle services
+* Highlighted opportunities to improve revenue through subscription parking plans, dynamic pricing, and customer loyalty programs
+
+**Tools & Techniques**
+
+Business Analytics • Customer Behavior Analysis • Revenue Optimization • Data Visualization • Strategic Planning
+
+**Business Value**
+
+Developed a phased roadmap for parking subscriptions, dynamic pricing, customer loyalty programs, shuttle optimization, EV charging infrastructure, and digital customer services. The recommendations were designed to increase parking utilization, improve customer satisfaction, expand revenue opportunities, and support the airport's long-term mobility strategy.
+
 ---
 
 ## **Education**
