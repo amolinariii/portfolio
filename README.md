@@ -1,4 +1,4 @@
-Data Analyst | Statistical Modeling & Business Analytics
+Data Analyst | Statistical Modeling, Customer Analytics & Business Intelligence
 
 ## **About Me**
 Data analyst with an M.S. in Statistics and Applied Mathematics and experience spanning organizational assessment, business operations, customer behavior, and product analytics. Skilled in translating stakeholder objectives into analytical frameworks, reporting solutions, and actionable insights from large-scale survey, operational, and transaction datasets. Experienced in leading cross-functional analytical projects and delivering data-driven recommendations that support strategic decision-making, operational improvement, and customer engagement.
@@ -10,6 +10,7 @@ Data analyst with an M.S. in Statistics and Applied Mathematics and experience s
 ## Featured Work
 
 - [Research Thesis](#featured-research-project)
+- [Customer Churn Factors and Prediction](#customer-churn-factors-and-prediction)
 - [MISSA Information Technology Competition](#cal-poly-pomona-missa-30th-annual-information-technology-competition--business-analytics)
 - [Ontario International Airport CEO Business Challenge](#ontario-international-airport-ceo-business-challenge)
 - [CRM Sales Performance Dashboard](#crm-sales-performance-dashboard)
@@ -73,7 +74,9 @@ The resulting state assignments reveal recurring demand and purchasing patterns 
 
 [View Full Presentation](<Thesis/Arturo Molinar Thesis Defense Presentation.pdf>)
 
-## **Projects**
+## Projects
+
+The following projects demonstrate experience in statistical modeling, predictive analytics, business intelligence, customer analytics, data warehousing, and strategic decision-making.
 
 ### Customer Churn Factors and Prediction
 
@@ -224,7 +227,7 @@ Business Analytics • Customer Behavior Analysis • Revenue Optimization • D
 
 Developed a phased roadmap for parking subscriptions, dynamic pricing, customer loyalty programs, shuttle optimization, EV charging infrastructure, and digital customer services. The recommendations were designed to increase parking utilization, improve customer satisfaction, expand revenue opportunities, and support the airport's long-term mobility strategy.
 
-### Summary
+### Key Findings
 
 Analysis of parking utilization, revenue trends, and customer transportation behaviors revealed opportunities to improve parking demand, increase revenue, and enhance the traveler experience. Key findings showed that parking utilization is heavily influenced by lot location, seasonal demand patterns, and the growing adoption of rideshare services. Underutilized parking assets, customer dissatisfaction with parking accessibility, and increasing demand for digital convenience highlighted areas for operational improvement.
 
@@ -268,7 +271,7 @@ Excel • Microsoft SQL Server • Power BI • Data Modeling • Dashboard Deve
 
 The dashboard provides a centralized view of sales performance and pipeline activity, enabling stakeholders to evaluate team effectiveness, identify growth opportunities, monitor product performance, and support data-driven sales decisions.
 
-Preview of Project:
+### Dashboard Preview
 ![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
 
 ---
@@ -277,6 +280,7 @@ Preview of Project:
 
 ### Data Analyst Assistant | Associated Students Inc. (Cal Poly Pomona)
 - Collaborated with campus leadership to define assessment objectives, analyze survey data, and deliver insights that informed organizational planning and resource allocation.
+- Analyzed and interpreted 5,000+ survey responses to evaluate organizational initiatives, learning culture, and capital projects.
 - Developed Power BI dashboards and reporting solutions for senior leadership.
 - Designed analytical frameworks that reduced project turnaround time by 3 weeks.
 
