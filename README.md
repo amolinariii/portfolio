@@ -10,10 +10,10 @@ Data analyst with an M.S. in Statistics and Applied Mathematics and experience s
 ## Featured Work
 
 - [Research Thesis](#featured-research-project)
-- [Customer Churn Factors and Prediction](#customer-churn-factors-and-prediction)
-- [MISSA Information Technology Competition](#cal-poly-pomona-missa-30th-annual-information-technology-competition--business-analytics)
-- [Ontario International Airport CEO Business Challenge](#ontario-international-airport-ceo-business-challenge)
-- [CRM Sales Performance Dashboard](#crm-sales-performance-dashboard)
+- [Customer Churn Prediction](#customer-churn-factors-and-prediction)
+- [MISSA Competition](#cal-poly-pomona-missa-30th-annual-information-technology-competition--business-analytics)
+- [ONT Airport Challenge](#ontario-international-airport-ceo-business-challenge)
+- [CRM Dashboard](#crm-sales-performance-dashboard)
 ---
 
 ## Featured Research Project
