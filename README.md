@@ -107,7 +107,7 @@ Preview of Project:
 ![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
 
 
-### Cal Poly Pomona MISSA 30th Information Technology Competition – Business Analytics
+### Cal Poly Pomona MISSA 30th Annual Information Technology Competition – Business Analytics
 
 **Overview**
 
@@ -130,16 +130,34 @@ Design a scalable data integration framework that enables a unified view of cust
 * Identified customer journey tracks associated with long-term loyalty and repeat engagement
 * Distinguished behavioral patterns between loyal and one-time customers
 * Revealed data quality gaps that limited visibility into customer behavior across channels
-* Highlighted opportunities to improve customer understanding through integrated data sources
-* Identified key customer touchpoints that influence retention and brand engagement
+* Demonstrated how integrating first-party and third-party data sources creates a more complete view of customer engagement and lifetime value
+* Identified customer touchpoints associated with repeat engagement, brand loyalty, and higher customer lifetime value
 
 **Tools & Techniques**
 
-Data Warehousing • Customer Journey Analysis • Data Integration • Customer Segmentation • Business Analytics
+Data Warehousing • Customer Journey Analysis • Data Integration • Identity Resolution • Customer Segmentation • Business Analytics
 
 **Business Value**
 
 Provided a strategic roadmap for integrating customer data across channels, improving customer visibility, and enabling more effective customer analytics. Recommendations focused on strengthening customer retention, increasing brand engagement, improving marketing effectiveness, and supporting customer lifetime value analysis.
+
+### Data Warehouse Architecture
+
+The proposed architecture integrates first-party and third-party customer touchpoints into a centralized data warehouse to support unified customer profiles, customer journey analysis, and customer lifetime value reporting.
+
+![Data Warehouse Architecture](images/ITC_Data_Warehouse.drawio_2.png)
+
+### Implementation Roadmap
+
+A phased implementation strategy was developed to prioritize foundational data integration efforts, customer identity resolution, and long-term customer analytics capabilities.
+
+![Implementation Roadmap](images/Implementation_Summary.pdf)
+
+### Presentation
+
+[View Full Presentation](Competitions/ITC Mathodicals 2026 (1)-compressed.pdf)
+
+
 
 
 ### Ontario International Airport CEO Business Challenge
