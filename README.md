@@ -2,6 +2,17 @@ Data Analyst | Statistical Modeling & Business Analytics
 
 ## **About Me**
 Data analyst with an M.S. in Statistics and Applied Mathematics and experience spanning organizational assessment, business operations, customer behavior, and product analytics. Skilled in translating stakeholder objectives into analytical frameworks, reporting solutions, and actionable insights from large-scale survey, operational, and transaction datasets. Experienced in leading cross-functional analytical projects and delivering data-driven recommendations that support strategic decision-making, operational improvement, and customer engagement.
+
+**Resume:** [Download Resume](resume/Arturo_Molinar_Resume.pdf)
+
+**LinkedIn:** www.linkedin.com/in/amolinariii
+
+## Featured Work
+
+- [Research Thesis](#featured-research-project)
+- [MISSA Information Technology Competition](#cal-poly-pomona-missa-30th-annual-information-technology-competition--business-analytics)
+- [Ontario International Airport CEO Business Challenge](#ontario-international-airport-ceo-business-challenge)
+- [CRM Sales Performance Dashboard](#crm-sales-performance-dashboard)
 ---
 
 ## Featured Research Project
@@ -180,14 +191,13 @@ Provide leadership with a centralized reporting solution to monitor sales perfor
 * Tracked sales pipeline stages including won, lost, prospecting, and engaging opportunities
 * Monitored sales trends over time to identify performance patterns
 
-**Tools**
+**Tools & Techniques**
 
-Excel • Microsoft SQL Server • Power BI
+Excel • Microsoft SQL Server • Power BI • Data Modeling • Dashboard Development
 
 **Business Value**
 
 The dashboard provides a centralized view of sales performance and pipeline activity, enabling stakeholders to evaluate team effectiveness, identify growth opportunities, monitor product performance, and support data-driven sales decisions.
- 
 
 Preview of Project:
 ![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
@@ -214,12 +224,12 @@ Preview of Project:
 
 **Methods:** Statistical Modeling, Machine Learning, Time Series Analysis, Customer Segmentation, Survey Analysis, Forecasting, Data Warehousing
 
-## **Education**
-- **Master of Science: Statistics and Applied Mathematics** — *Cal Poly Pomona*  
-  *May 2026*  
-  Relevant Courses: Statistical Learning, Multivariate Data Analysis, Advance Data Analytics, Data Warehouse
-  
-  **Bachelor of Science: Applied Mathematics** — *UCLA*  
-  *Mar 2021*  
+## Education
+
+**Master of Science, Statistics and Applied Mathematics**  
+California State Polytechnic University, Pomona
+
+**Bachelor of Science, Applied Mathematics**  
+University of California, Los Angeles
 
 ---
