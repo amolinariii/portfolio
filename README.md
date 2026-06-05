@@ -151,8 +151,7 @@ The proposed architecture integrates first-party and third-party customer touchp
 
 A phased implementation strategy was developed to prioritize foundational data integration efforts, customer identity resolution, and long-term customer analytics capabilities.
 
-![Implementation Roadmap](images/Implementation_Summary.pdf)
-
+![Implementation Roadmap](images/ITC_Summary-1.png)
 ### Presentation
 
 [View Full Presentation](Competitions/ITC Mathodicals 2026 (1)-compressed.pdf)
