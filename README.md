@@ -155,9 +155,7 @@ A phased implementation strategy was developed to prioritize foundational data i
 
 ### Presentation
 
-[View Full Presentation](Competitions/ITC%Mathodicals%202026%20(1)-compressed.pdf)
-
-
+[View Full Presentation](<Competitions/ITC Mathodicals 2026 (1)-compressed.pdf>)
 
 
 ### Ontario International Airport CEO Business Challenge
@@ -193,6 +191,16 @@ Business Analytics • Customer Behavior Analysis • Revenue Optimization • D
 **Business Value**
 
 Developed a phased roadmap for parking subscriptions, dynamic pricing, customer loyalty programs, shuttle optimization, EV charging infrastructure, and digital customer services. The recommendations were designed to increase parking utilization, improve customer satisfaction, expand revenue opportunities, and support the airport's long-term mobility strategy.
+
+### Summary
+
+A phased implementation strategy was developed to prioritize foundational data integration efforts, customer identity resolution, and long-term customer analytics capabilities.
+
+![Key Findings](images/ONT%Summary-1.png)
+
+### Presentation
+
+[View Full Presentation](<Competitions/ONT Future Proofing Airport Parking.pdf>)
 
 ---
 
