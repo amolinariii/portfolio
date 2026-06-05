@@ -1,24 +1,11 @@
 Data Analyst | Statistical Modeling & Business Analytics
 
 ## **About Me**
-Data analyst with an M.S. in Statistics and Applied Mathematics and experience spanning organizational assessment, business operations, customer behavior, and product analytics. Skilled in translating stakeholder objectives into analytical frameworks, reporting solutions, and actionable insights from large-scale survey, operational, and transaction datasets. Experienced in managing cross-functional projects and delivering data-driven recommendations that support strategic decision-making, operational improvement, and customer engagement.
-Welcome to my portfolio!
-
-## Professional Experience
-
-### Data Analyst Assistant | Associated Students Inc. (Cal Poly Pomona)
-- Collaborated with campus leadership to define assessment objectives, analyze survey data, and deliver insights that informed organizational planning and resource allocation.
-- Developed Power BI dashboards and reporting solutions for senior leadership.
-- Designed analytical frameworks that reduced project turnaround time by 3 weeks.
-
-### Sales & Operations Assistant | Western Case Inc.
-- Analyzed ERP data across 1,000+ customer accounts and 50+ products.
-- Developed KPI dashboards and operational reporting solutions in Power BI.
-- Supported sales, production, and resource planning through data-driven analysis.
-
+Data analyst with an M.S. in Statistics and Applied Mathematics and experience spanning organizational assessment, business operations, customer behavior, and product analytics. Skilled in translating stakeholder objectives into analytical frameworks, reporting solutions, and actionable insights from large-scale survey, operational, and transaction datasets. Experienced in leading cross-functional analytical projects and delivering data-driven recommendations that support strategic decision-making, operational improvement, and customer engagement.
 ---
 
-## Thesis: Identifying Business States and Product States in Transaction Data
+## Featured Research Project
+### Identifying Business States and Product States in Transaction Data
 
 ### Overview
 
@@ -33,11 +20,16 @@ Organizations often analyze customer demand, product performance, and purchasing
 
 ### Methodology
 
-- Hierarchical Clustering
-- Sequence Analysis
-- Time Series Pattern Analysis
-- Multivariate Statistical Methods
-- R Programming
+- Developed a state-based analytical framework separating product composition from demand volume
+- Identified product preference clusters using hierarchical clustering
+- Partitioned product preference clusters into product trend clusters
+- Identified demand clusters based on transaction volume
+- Constructed business states and product states through cluster assignment intersections
+- Applied sequence analysis to evaluate temporal state transitions
+
+### Tools & Techniques
+
+R • Hierarchical Clustering • Sequence Analysis • Statistical Modeling • Multivariate Analysis • Time Series Analysis
 
 ### Key Findings
 
@@ -67,45 +59,6 @@ The framework provides actionable insights for:
 The resulting state assignments reveal recurring demand and purchasing patterns that can support inventory planning, demand forecasting, product management, and operational decision-making.
 
 ## **Projects**
-
-### **CRM Sales Performance Dashboard**
-
-**Overview**
-
-Developed an interactive sales performance dashboard using CRM data from a B2B computer hardware company to evaluate sales pipeline performance, account activity, product sales, and team effectiveness. The dashboard enables users to analyze won, lost, prospecting, and engaging opportunities across regions, sales teams, accounts, and products.
-
-**Objective**
-
-Provide leadership with a centralized reporting solution to monitor sales performance, identify high-performing products and sales teams, evaluate pipeline opportunities, and uncover trends in customer and account activity.
-
-**Methodology**
-
-* Imported CRM datasets from Excel into Microsoft SQL Server
-* Cleaned, transformed, and joined multiple data sources into a centralized master table
-* Queried SQL Server directly from Power BI
-* Developed interactive dashboards with filters for region, month, and deal stage
-* Created KPIs and visualizations to evaluate sales performance across products, accounts, and sales teams
-
-**Key Insights**
-
-* Compared sales performance across regions and sales teams
-* Identified top-performing sales agents and accounts
-* Evaluated product-level sales and units sold
-* Tracked sales pipeline stages including won, lost, prospecting, and engaging opportunities
-* Monitored sales trends over time to identify performance patterns
-
-**Tools**
-
-Excel • Microsoft SQL Server • Power BI
-
-**Business Value**
-
-The dashboard provides a centralized view of sales performance and pipeline activity, enabling stakeholders to evaluate team effectiveness, identify growth opportunities, monitor product performance, and support data-driven sales decisions.
- 
-
-Preview of Project:
-![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
-
 
 ### Cal Poly Pomona MISSA 30th Annual Information Technology Competition – Business Analytics
 
@@ -157,7 +110,6 @@ A phased implementation strategy was developed to prioritize foundational data i
 
 [View Full Presentation](<Competitions/ITC Mathodicals 2026 (1)-compressed.pdf>)
 
-
 ### Ontario International Airport CEO Business Challenge
 
 **Overview**
@@ -202,7 +154,65 @@ Based on these findings, recommendations focused on parking subscriptions, dynam
 
 **Presentation:** [View Full Presentation](<Competitions/ITC Mathodicals 2026 (1)-compressed.pdf>)
 
+### **CRM Sales Performance Dashboard**
+
+**Overview**
+
+Developed an interactive sales performance dashboard using CRM data from a B2B computer hardware company to evaluate sales pipeline performance, account activity, product sales, and team effectiveness. The dashboard enables users to analyze won, lost, prospecting, and engaging opportunities across regions, sales teams, accounts, and products.
+
+**Objective**
+
+Provide leadership with a centralized reporting solution to monitor sales performance, identify high-performing products and sales teams, evaluate pipeline opportunities, and uncover trends in customer and account activity.
+
+**Methodology**
+
+* Imported CRM datasets from Excel into Microsoft SQL Server
+* Cleaned, transformed, and joined multiple data sources into a centralized master table
+* Queried SQL Server directly from Power BI
+* Developed interactive dashboards with filters for region, month, and deal stage
+* Created KPIs and visualizations to evaluate sales performance across products, accounts, and sales teams
+
+**Key Insights**
+
+* Compared sales performance across regions and sales teams
+* Identified top-performing sales agents and accounts
+* Evaluated product-level sales and units sold
+* Tracked sales pipeline stages including won, lost, prospecting, and engaging opportunities
+* Monitored sales trends over time to identify performance patterns
+
+**Tools**
+
+Excel • Microsoft SQL Server • Power BI
+
+**Business Value**
+
+The dashboard provides a centralized view of sales performance and pipeline activity, enabling stakeholders to evaluate team effectiveness, identify growth opportunities, monitor product performance, and support data-driven sales decisions.
+ 
+
+Preview of Project:
+![CRM Dashboard](https://github.com/amolinariii/portfolio/raw/main/images/CRM%20Dashboard.png)
+
 ---
+
+## Professional Experience
+
+### Data Analyst Assistant | Associated Students Inc. (Cal Poly Pomona)
+- Collaborated with campus leadership to define assessment objectives, analyze survey data, and deliver insights that informed organizational planning and resource allocation.
+- Developed Power BI dashboards and reporting solutions for senior leadership.
+- Designed analytical frameworks that reduced project turnaround time by 3 weeks.
+
+### Sales & Operations Assistant | Western Case Inc.
+- Analyzed ERP data across 1,000+ customer accounts and 50+ products.
+- Developed KPI dashboards and operational reporting solutions in Power BI.
+- Supported sales, production, and resource planning through data-driven analysis.
+
+## Technical Skills
+
+**Programming & Data:** Python, R, SQL Server, BigQuery, Azure
+
+**Analytics & Visualization:** Power BI, Tableau, Excel, Dedoose, Qualtrics
+
+**Methods:** Statistical Modeling, Machine Learning, Time Series Analysis, Customer Segmentation, Survey Analysis, Forecasting, Data Warehousing
 
 ## **Education**
 - **Master of Science: Statistics and Applied Mathematics** — *Cal Poly Pomona*  
