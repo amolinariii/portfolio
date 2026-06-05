@@ -69,6 +69,10 @@ The framework provides actionable insights for:
 
 The resulting state assignments reveal recurring demand and purchasing patterns that can support inventory planning, demand forecasting, product management, and operational decision-making.
 
+### Thesis Defense
+
+[View Full Presentation](<Thesis/Arturo Molinar Thesis Defense Presentation.pdf>)
+
 ## **Projects**
 
 ### Customer Churn Factors and Prediction
