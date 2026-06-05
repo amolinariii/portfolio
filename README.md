@@ -71,6 +71,71 @@ The resulting state assignments reveal recurring demand and purchasing patterns 
 
 ## **Projects**
 
+### Customer Churn Factors and Prediction
+
+**Overview**
+
+Developed a customer churn prediction framework for a fitness center using statistical inference and machine learning techniques to identify factors associated with customer attrition. The project combined exploratory analysis, hypothesis testing, residual analysis, and regularized logistic regression to understand churn behavior and develop predictive retention strategies.
+
+**Objective**
+
+Identify the factors that influence customer churn, quantify their impact on retention, and develop a predictive model capable of identifying customers at risk of cancellation before they disengage.
+
+**Dataset**
+
+* 4,000 customer records
+* 14 variables
+* Fitness center membership data
+* Customer demographics, engagement, contract information, and service utilization metrics
+
+**Methodology**
+
+* Performed exploratory data analysis on customer demographics, engagement metrics, and membership characteristics
+* Applied G-tests of homogeneity to evaluate differences between churn and retained customer groups
+* Conducted residual analysis to identify specific customer segments associated with retention and churn
+* Engineered new features, including attendance-based behavior metrics such as Class Deviance
+* Developed logistic regression models with Lasso and Ridge regularization
+* Applied 5-fold cross-validation to optimize model performance and reduce overfitting
+* Evaluated models using Accuracy, AUC, Sensitivity, and Specificity
+
+**Tools & Techniques**
+
+R • Logistic Regression • Lasso Regression • Ridge Regression • Cross Validation • Customer Segmentation • Hypothesis Testing • Residual Analysis • Predictive Analytics
+
+**Key Findings**
+
+* Customer engagement was a stronger predictor of retention than demographic characteristics
+* Customers enrolled through promotional friend programs were significantly more likely to remain active
+* Annual and semi-annual memberships demonstrated substantially higher retention rates than monthly memberships
+* Customers who brought friends and regularly attended classes exhibited lower churn risk
+* New and less-engaged members were significantly more likely to cancel their memberships
+* The first 10 months of membership represented the highest-risk period for customer churn
+
+**Predictive Modeling Results**
+
+Three predictive models were evaluated using regularization techniques to balance model performance and interpretability.
+
+| Model                    | Accuracy | AUC    | Sensitivity | Specificity |
+| ------------------------ | -------- | ------ | ----------- | ----------- |
+| Lasso                    | 93.74%   | 0.9753 | 0.9841      | 0.8082      |
+| Ridge                    | 92.91%   | 0.9755 | 0.9807      | 0.7862      |
+| Ridge (Excluding Gender) | 93.08%   | 0.9757 | 0.9807      | 0.7925      |
+
+The Lasso model demonstrated the strongest overall performance while simultaneously reducing model complexity through feature selection, making it the preferred solution for operational deployment.
+
+**Business Value**
+
+The resulting model enables organizations to proactively identify customers at risk of cancellation and implement targeted retention strategies before churn occurs. Recommendations focused on increasing customer engagement, encouraging social participation, promoting longer contract commitments, and deploying personalized outreach campaigns based on behavioral risk indicators.
+
+### Key Findings
+
+![Customer Churn Analysis](images/Customer_Churn_Summary.png)
+
+### Presentation
+
+[View Full Presentation](Projects/Customer Churn Factors and Prediction.pptx)
+
+
 ### Cal Poly Pomona MISSA 30th Annual Information Technology Competition – Business Analytics
 
 **Overview**
